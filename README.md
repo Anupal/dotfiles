@@ -31,3 +31,9 @@ Using this repo to manage my nvim configuration.
 
 - `gc` - Toggles the region using linewise comment
 - `gb` - Toggles the region using blockwise comment
+
+
+### References
+- https://github.com/radleylewis/nvim-lite/blob/youtube_demo/init.lua
+- https://vineeth.io/posts/neovim-setup
+- https://www.josean.com/posts/how-to-setup-neovim-2024

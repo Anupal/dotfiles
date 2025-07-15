@@ -26,5 +26,9 @@ wk.add({
   -- Basic editor actions
   { "<leader>q", "<cmd>q<cr>", desc = "Quit", mode = "n" },
   { "<leader>w", "<cmd>w<cr>", desc = "Write", mode = "n" },
+
+  -- Better indenting in visual mode
+  { "<", "<gv", desc = "Indent left and reselect", mode = "v" },
+  { ">", ">gv", desc = "Indent right and reselect", mode = "v" },
 })
 
