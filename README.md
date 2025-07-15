@@ -32,6 +32,14 @@ Using this repo to manage my nvim configuration.
 - `gc` - Toggles the region using linewise comment
 - `gb` - Toggles the region using blockwise comment
 
+#### Auto-complete
+- trigger in insert mode with `ctrl+x` + `ctrl+o`
+- browser using `ctrl+n` (next) and `ctrl+p` (prev)
+- go to definition using `ctrl + ]` and go back using `ctrl+t`
+- `K` shows info box for the function
+- `=G` will format the file for you
+- `grr` show references
+- `grn` rename variable
 
 ### References
 - https://github.com/radleylewis/nvim-lite/blob/youtube_demo/init.lua

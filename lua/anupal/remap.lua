@@ -30,5 +30,20 @@ wk.add({
   -- Better indenting in visual mode
   { "<", "<gv", desc = "Indent left and reselect", mode = "v" },
   { ">", ">gv", desc = "Indent right and reselect", mode = "v" },
+
+  -- LSP Actions
+  { "gR", "<cmd>Telescope lsp_references<CR>", desc = "Show LSP references", mode = "n" },
+  { "gD", vim.lsp.buf.declaration, desc = "Go to declaration", mode = "n" },
+  { "gd", "<cmd>Telescope lsp_definitions<CR>", desc = "Show LSP definitions", mode = "n" },
+  { "gi", "<cmd>Telescope lsp_implementations<CR>", desc = "Show LSP implementations", mode = "n" },
+  { "gt", "<cmd>Telescope lsp_type_definitions<CR>", desc = "Show LSP type definitions", mode = "n" },
+  { "<leader>ca", vim.lsp.buf.code_action, desc = "See available code actions", mode = { "n", "v" } },
+  { "<leader>rn", vim.lsp.buf.rename, desc = "Smart rename", mode = "n" },
+  { "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", desc = "Show buffer diagnostics", mode = "n" },
+  { "<leader>d", vim.diagnostic.open_float, desc = "Show line diagnostics", mode = "n" },
+  { "[d", vim.diagnostic.goto_prev, desc = "Go to previous diagnostic", mode = "n" },
+  { "]d", vim.diagnostic.goto_next, desc = "Go to next diagnostic", mode = "n" },
+  { "K", vim.lsp.buf.hover, desc = "Show documentation under cursor", mode = "n" },
+  { "<leader>rs", "<cmd>LspRestart<CR>", desc = "Restart LSP", mode = "n" },
 })
 
