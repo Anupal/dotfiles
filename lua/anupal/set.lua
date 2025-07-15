@@ -51,7 +51,7 @@ vim.opt.selection = "exclusive"                    -- Selection behavior
 vim.opt.mouse = "a"                                -- Enable mouse support
 vim.opt.clipboard:append("unnamedplus")            -- Use system clipboard
 vim.opt.modifiable = true                          -- Allow buffer modifications
-vim.opt.encoding = "UTF-8"                         -- Set encoding
+vim.opt.encoding = "UTF-8"                         -- Set encoding
 
 
 -- vim.opt.clipboard = 'unnamedplus'  -- user system's keyboard for yank
