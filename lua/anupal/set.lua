@@ -60,3 +60,11 @@ vim.opt.encoding = "UTF-8"                         -- Set encoding
 -- Colorscheme
 -- vim.o.background = 'light'
 vim.cmd.colorscheme "vscode"
+
+-- Miscellaneous stuff
+
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {  -- treat axaml as xml
+  pattern = "*.axaml",
+  command = "set filetype=xml",
+})
+
