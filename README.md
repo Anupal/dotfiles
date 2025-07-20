@@ -1,6 +1,10 @@
 # NVIM configuration
 Using this repo to manage my nvim configuration.
 
+### Vim stuff
+#### select a block and replace using regex
+- Select a block of text using visual mode
+- type `s/<string-to-replace>/<new-text>/`
 
 ### Hotkeys to remember
 #### NVIM-Tree (file-explorer)
