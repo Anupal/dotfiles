@@ -23,9 +23,17 @@ wk.add({
   { "<leader>k", "<C-w>k", desc = "Move to above window", mode = "n" },
   { "<leader>l", "<C-w>l", desc = "Move to right window", mode = "n" },
 
-  -- Basic editor actions
+  -- Save/exit
+  { "<leader>w", group = "workspace" },
+  { "<leader>wr", "<cmd>SessionRestore<CR>", desc = "Restore session for cwd", mode = "n" },
+  { "<leader>ws", "<cmd>SessionSave<CR>", desc = "Save session for auto session root dir", mode = "n" },
+  { "<leader>ww", "<cmd>w<cr>", desc = "Write file", mode = "n" },
   { "<leader>q", "<cmd>q<cr>", desc = "Quit", mode = "n" },
-  { "<leader>w", "<cmd>w<cr>", desc = "Write", mode = "n" },
+
+  -- Splits
+  { "<leader>s", group = "splits" },
+  { "<leader>sv", "<cmd>vsplit<CR>", desc = "Vertical split", mode = "n" },
+  { "<leader>sh", "<cmd>split<CR>", desc = "Horizontal split", mode = "n" },
 
   -- Better indenting in visual mode
   { "<", "<gv", desc = "Indent left and reselect", mode = "v" },
