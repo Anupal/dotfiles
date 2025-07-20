@@ -60,7 +60,7 @@ return {
         })
 
         local pid = vim.fn.getpid()
-        vim.lsp.config("lua_ls", {
+        vim.lsp.config("omnisharp", {
             capabilities = capabilities,
             settings = {
                 cmd = { "omnisharp", "--languageserver" , "--hostPID", tostring(pid)},
