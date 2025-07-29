@@ -59,19 +59,19 @@ return {
             }
         })
 
-        local pid = vim.fn.getpid()
-        vim.lsp.config("omnisharp", {
-            capabilities = capabilities,
-            settings = {
-                cmd = { "omnisharp", "--languageserver" , "--hostPID", tostring(pid)},
-                enable_import_completion = true,
-                organize_imports_on_format = true,
-                enable_roslyn_analyzers = true,
-                root_dir = function ()
-                    return vim.loop.cwd() -- current working directory
-                end,
-            }
-        })
+        -- local pid = vim.fn.getpid()
+        -- vim.lsp.config("omnisharp", {
+        --     capabilities = capabilities,
+        --     settings = {
+        --         cmd = { "omnisharp", "--languageserver" , "--hostPID", tostring(pid)},
+        --         enable_import_completion = true,
+        --         organize_imports_on_format = true,
+        --         enable_roslyn_analyzers = true,
+        --         root_dir = function ()
+        --             return vim.loop.cwd() -- current working directory
+        --         end,
+        --     }
+        -- })
     end,
 
 }
