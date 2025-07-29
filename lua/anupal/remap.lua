@@ -53,5 +53,8 @@ wk.add({
   { "]d", vim.diagnostic.goto_next, desc = "Go to next diagnostic", mode = "n" },
   { "K", vim.lsp.buf.hover, desc = "Show documentation under cursor", mode = "n" },
   { "<leader>rs", "<cmd>LspRestart<CR>", desc = "Restart LSP", mode = "n" },
+
+  -- Miscellaneous
+  { "jk", "<Esc>", mode = "i", desc = "Exit insert mode" }
 })
 
