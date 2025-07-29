@@ -1,0 +1,53 @@
+format = """
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$lua\
+$python\
+$docker_context\
+$jobs\
+$cmd_duration\
+$line_break\
+$character"""
+
+palette = "vscode"
+
+[fill]
+symbol = '—'
+style = 'grey'
+
+[directory]
+style = 'bold fg:dark_blue'
+format = '[$path ]($style)'
+truncation_length = 3
+truncation_symbol = '󰇘/'
+truncate_to_repo = false
+
+[git_branch]
+style = 'fg:green'
+symbol = ''
+format = '[on](white) [$symbol $branch ]($style)'
+
+[git_status]
+style = 'fg:green'
+format = '([$all_status$ahead_behind]($style) )'
+
+[cmd_duration]
+min_time = 500
+style = 'fg:grey'
+format = '[ $duration]($style)'
+
+[palettes.vscode]
+dark_blue = "#005f87"
+light_blue = "#87d7ff"
+green = "#238636"
+red = "#da3633"
+grey = "#5A5A5A"
+
+[docker_context]
+symbol = ' '
+style = 'fg:light_blue'
+format = '[$symbol]($style) $path'
+detect_files = ['docker-compose.yml', 'docker-compose.yaml', 'Dockerfile']
+detect_extensions = ['Dockerfile']
