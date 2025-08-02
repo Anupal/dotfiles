@@ -53,16 +53,11 @@ vim.opt.clipboard:append("unnamedplus")            -- Use system clipboard
 vim.opt.modifiable = true                          -- Allow buffer modifications
 vim.opt.encoding = "UTF-8"                         -- Set encoding
 
-
--- vim.opt.clipboard = 'unnamedplus'  -- user system's keyboard for yank
--- vim.api.nvim_set_option("clipboard", "unnamedplus")
-
 -- Colorscheme
 -- vim.o.background = 'light'
-vim.cmd.colorscheme "vscode"
+vim.cmd.colorscheme "carbonfox"
 
 -- Miscellaneous stuff
-
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {  -- treat axaml as xml
   pattern = "*.axaml",
   command = "set filetype=xml",
