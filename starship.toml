@@ -11,15 +11,15 @@ $cmd_duration\
 $line_break\
 $character"""
 
-palette = "vscode"
+palette = "gnome"
 
 [fill]
 symbol = '—'
 style = 'grey'
 
 [directory]
-style = 'bold fg:dark_blue'
-format = '[$path ]($style)'
+style = 'bold fg:blue'
+format = '[  $path ]($style)'
 truncation_length = 3
 truncation_symbol = '󰇘/'
 truncate_to_repo = false
@@ -38,11 +38,7 @@ min_time = 500
 style = 'fg:grey'
 format = '[ $duration]($style)'
 
-[palettes.vscode]
-dark_blue = "#005f87"
-light_blue = "#87d7ff"
-green = "#238636"
-red = "#da3633"
+[palettes.gnome]
 grey = "#5A5A5A"
 
 [docker_context]
