@@ -7,7 +7,9 @@ $lua\
 $python\
 $docker_context\
 $jobs\
-$cmd_duration\
+$cmd_duration \
+$username\
+$hostname\
 $line_break\
 $character"""
 
@@ -47,3 +49,13 @@ style = 'fg:light_blue'
 format = '[$symbol]($style) $path'
 detect_files = ['docker-compose.yml', 'docker-compose.yaml', 'Dockerfile']
 detect_extensions = ['Dockerfile']
+
+[username]
+format = '[$user@]($style)'
+style_user = 'bold yellow'
+show_always = true
+
+[hostname]
+ssh_only = false
+format = '[$hostname $ssh_symbol]($style)'
+style = 'bold yellow'
