@@ -20,4 +20,9 @@ ln -s $(pwd)/starship.toml ~/.config/starship.toml
 
 # tmux
 ln -s $(pwd)/tmux.conf ~/.tmux.conf
+
+# alacritty
+mkdir -p ~/.config/alacritty
+ln -s $(pwd)/alacritty.toml ~/.config/alacritty/alacritty.toml
+ln -s $(pwd)/gnome_terminal.toml ~/.config/alacritty/gnome_terminal.toml
 ```
