@@ -28,7 +28,9 @@ wk.add({
   { "<leader>wr", "<cmd>SessionRestore<CR>", desc = "Restore session for cwd", mode = "n" },
   { "<leader>ws", "<cmd>SessionSave<CR>", desc = "Save session for auto session root dir", mode = "n" },
   { "<leader>ww", "<cmd>w<cr>", desc = "Write file", mode = "n" },
-  { "<leader>q", "<cmd>q<cr>", desc = "Quit", mode = "n" },
+  { "<leader>q", group = "quit" },
+  { "<leader>qq", "<cmd>q<cr>", desc = "Quit", mode = "n" },
+  { "<leader>qa", "<cmd>qa<cr>", desc = "Quit all", mode = "n" },
 
   -- Splits
   { "<leader>s", group = "splits" },

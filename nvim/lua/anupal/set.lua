@@ -10,9 +10,9 @@ vim.opt.wrap = false
 
 -- Indentation
 vim.opt.expandtab = true           -- Use spaces instead of tabs
-vim.opt.tabstop = 4                -- Number of spaces a tab counts for
-vim.opt.softtabstop = 4            -- Editing mode tab width
-vim.opt.shiftwidth = 4             -- Indent width
+vim.opt.tabstop = 2                -- Number of spaces a tab counts for
+vim.opt.softtabstop = 2            -- Editing mode tab width
+vim.opt.shiftwidth = 2             -- Indent width
 vim.opt.smartindent = true         -- Enable auto indenting
 
 -- Search setting
