@@ -28,6 +28,8 @@ vim.opt.completeopt = "menuone,noinsert,noselect"  -- Completion options
 vim.opt.synmaxcol = 300                            -- Syntax highlighting limit
 vim.opt.cmdheight = 1                              -- Command line height
 vim.opt.showmode = false                           -- Don't show mode in command line
+vim.opt.list = true                                -- Display · for whitespace and
+vim.opt.listchars = { tab = '→ ', space = '·' }    -- → for tabs
 
 -- File handling
 vim.opt.backup = false                             -- Don't create backup files
