@@ -65,3 +65,23 @@ vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {  -- treat axaml as xml
   command = "set filetype=xml",
 })
 
+-- Custom tab widths for .NET related files
+-- C# files
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "cs",
+    callback = function()
+        vim.opt_local.tabstop = 4
+        vim.opt_local.shiftwidth = 4
+        vim.opt_local.expandtab = true
+    end,
+})
+
+-- .csproj files
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+    pattern = "*.csproj",
+    callback = function()
+        vim.opt_local.tabstop = 2
+        vim.opt_local.shiftwidth = 2
+        vim.opt_local.expandtab = true
+    end,
+})
