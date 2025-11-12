@@ -19,7 +19,14 @@ Using this repo to manage my nvim configuration.
 - `Ctrl + k` to display information about the file such as size, creation date, etc.
 - `g + ?` to open the help with all the predefined shortcuts for quick reference
 - `q` to close the file explorer
+- `a` to create a new file (to create a directory suffix with `/`)
+- `r` to rename a file
 
+#### Navigate source
+- `shift` + `k` - Display function/variable signature
+- `gd` - Go to definition
+- `ctrl` + `o` - Go to previous cursor location (return after `gd`)
+- `ctrl` + `i` - Go to next cursor location
 
 #### comment out lines
 ##### NORMAL mode
