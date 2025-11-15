@@ -56,6 +56,17 @@ wk.add({
   { "K", vim.lsp.buf.hover, desc = "Show documentation under cursor", mode = "n" },
   { "<leader>rs", "<cmd>LspRestart<CR>", desc = "Restart LSP", mode = "n" },
 
+  -- Toggle Term
+  { "<leader>t", group = "terminal" },
+  { "<leader>tt", "<cmd>ToggleTerm<CR>",                        desc = "Toggle terminal",            mode = "n" },
+  { "<leader>tf", "<cmd>ToggleTerm direction=float<CR>",        desc = "Floating terminal",          mode = "n" },
+  { "<leader>th", "<cmd>ToggleTerm direction=horizontal<CR>",   desc = "Horizontal terminal",        mode = "n" },
+  { "<leader>tv", "<cmd>ToggleTerm direction=vertical<CR>",     desc = "Vertical terminal",          mode = "n" },
+
+  -- Optional numbered terminals
+  { "<leader>t1", "<cmd>1ToggleTerm<CR>", desc = "Terminal 1",   mode = "n" },
+  { "<leader>t2", "<cmd>2ToggleTerm<CR>", desc = "Terminal 2",   mode = "n" },
+
   -- Miscellaneous
   { "jk", "<Esc>", mode = "i", desc = "Exit insert mode" }
 })
