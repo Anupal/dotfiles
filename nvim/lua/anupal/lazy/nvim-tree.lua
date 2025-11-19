@@ -12,18 +12,34 @@ return {
       view = {
         width = 35,
         relativenumber = false,
-        number = false
+        number = false,
+        signcolumn = "yes",
       },
       -- change folder arrow icons
       renderer = {
+        highlight_git = true,
         indent_markers = {
           enable = true,
         },
         icons = {
           glyphs = {
             folder = {
+              default = "",
+              open = "",
+              empty = "",
+              empty_open = "",
+              symlink = "",
               arrow_closed = "", -- arrow when folder is closed
               arrow_open = "", -- arrow when folder is open
+            },
+            git = {
+              unstaged = "U",
+              staged = "S",
+              unmerged = "UM",
+              renamed = "R",
+              untracked = "",
+              deleted = "D",
+              ignored = "I",
             },
           },
         },
@@ -51,5 +67,17 @@ return {
 
     -- set keymaps
     local keymap = vim.keymap -- for conciseness
+
+    -- highlight currently open file
+    local api = require("nvim-tree.api")
+
+    vim.api.nvim_create_autocmd("BufEnter", {
+      nested = true,
+      callback = function()
+          if (vim.fn.bufname() == "NvimTree_1") then return end
+
+          api.tree.find_file({ buf = vim.fn.bufnr() })
+      end,
+    }) 
   end
 }
