@@ -2,11 +2,17 @@ return {
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
+    -- use global status line
+    vim.opt.laststatus = 3
+
     local lualine = require("lualine")
     local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
     -- configure lualine with modified theme
     lualine.setup({
+      options = {
+        globalstatus = true, -- to respect laststatus = 3
+      },
       sections = {
         lualine_x = {
           {
