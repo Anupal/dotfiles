@@ -5,7 +5,6 @@ return {
   opts = {},
   config = function()
     local vscode = require("vscode")
-    
     vscode.setup({
         -- Alternatively set style in setup
         -- style = 'light'
@@ -36,6 +35,6 @@ return {
         --    -- use colors from this colorscheme by requiring vscode.colors!
         --    Cursor = { fg=c.vscDarkBlue, bg=c.vscLightGreen, bold=true },
         -- }
-    }) 
+    })
   end,
 }
