@@ -25,8 +25,8 @@ wk.add({
 
   -- Save/exit
   { "<leader>w", group = "workspace" },
-  { "<leader>wr", "<cmd>SessionRestore<CR>", desc = "Restore session for cwd", mode = "n" },
-  { "<leader>ws", "<cmd>SessionSave<CR>", desc = "Save session for auto session root dir", mode = "n" },
+  { "<leader>wr", "<cmd>AutoSession restore<CR>", desc = "Restore session for cwd", mode = "n" },
+  { "<leader>ws", "<cmd>AutoSession save<CR>", desc = "Save session for auto session root dir", mode = "n" },
   { "<leader>ww", "<cmd>w<cr>", desc = "Write file", mode = "n" },
   { "<leader>q", group = "quit" },
   { "<leader>qq", "<cmd>q<cr>", desc = "Quit", mode = "n" },
