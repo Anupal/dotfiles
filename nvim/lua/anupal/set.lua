@@ -85,3 +85,9 @@ vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
         vim.opt_local.expandtab = true
     end,
 })
+
+-- auto-remove trailing spaces in files
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*",
+    command = [[%s/\s\+$//e]],
+})
