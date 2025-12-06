@@ -63,6 +63,9 @@ wk.add({
   { "<leader>th", "<cmd>ToggleTerm direction=horizontal<CR>",   desc = "Horizontal terminal",        mode = "n" },
   { "<leader>tv", "<cmd>ToggleTerm direction=vertical<CR>",     desc = "Vertical terminal",          mode = "n" },
 
+  -- LazyGit
+  { "<leader>g", function() require('toggleterm.terminal').Terminal:new({ cmd = 'lazygit', hidden = true }):toggle() end, desc = "LazyGit (floating)", mode = "n" },
+
   -- Optional numbered terminals
   { "<leader>t1", "<cmd>1ToggleTerm<CR>", desc = "Terminal 1",   mode = "n" },
   { "<leader>t2", "<cmd>2ToggleTerm<CR>", desc = "Terminal 2",   mode = "n" },

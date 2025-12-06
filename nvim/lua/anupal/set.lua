@@ -18,7 +18,7 @@ vim.opt.smartindent = true         -- Enable auto indenting
 -- Search setting
 vim.opt.ignorecase = true                          -- Case insensitive search
 vim.opt.smartcase = true                           -- Case sensitive if uppercase in search
-vim.opt.hlsearch = false                           -- Don't highlight search results 
+vim.opt.hlsearch = false                           -- Don't highlight search results
 vim.opt.incsearch = true                           -- Show matches as you type
 
 -- Visual settings
