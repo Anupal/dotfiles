@@ -45,7 +45,7 @@ Using this repo to manage my nvim configuration.
 
 #### Auto-complete
 - trigger in insert mode with `ctrl+x` + `ctrl+o`
-- browser using `ctrl+n` (next) and `ctrl+p` (prev)
+- browser using `ctrl+n` (next) and `ctrl+p` (prev), `ctrl+y` for current
 - go to definition using `ctrl + ]` and go back using `ctrl+t`
 - `K` shows info box for the function
 - `=G` will format the file for you
