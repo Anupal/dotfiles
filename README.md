@@ -35,3 +35,8 @@ https://dev.to/anurag_pramanik/how-to-enable-undercurl-in-neovim-terminal-and-tm
 - edit terminfo file add add `Smulx=\E[4:%p1%dm,` right after `smul=\E[4m,`.
 - reload terminfo file: `tic -x /tmp/${TERM}.ti`
 - verify that it is now enabled: `infocmp -l -x | grep Smulx`
+
+### Touchpad registers short mouse movements as clicks on Ubuntu
+```
+gsettings set org.gnome.desktop.peripherals.touchpad click-method 'fingers'
+```
