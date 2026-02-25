@@ -57,11 +57,36 @@ wk.add({
   { "<leader>rs", "<cmd>LspRestart<CR>", desc = "Restart LSP", mode = "n" },
 
   -- Toggle Term
-  { "<leader>t", group = "terminal" },
-  { "<leader>tt", "<cmd>ToggleTerm<CR>",                        desc = "Toggle terminal",            mode = "n" },
-  { "<leader>tf", "<cmd>ToggleTerm direction=float<CR>",        desc = "Floating terminal",          mode = "n" },
-  { "<leader>th", "<cmd>ToggleTerm direction=horizontal<CR>",   desc = "Horizontal terminal",        mode = "n" },
-  { "<leader>tv", "<cmd>ToggleTerm direction=vertical<CR>",     desc = "Vertical terminal",          mode = "n" },
+  { "<leader>T", group = "terminal" },
+  { "<leader>Tt", "<cmd>ToggleTerm<CR>",                        desc = "Toggle terminal",            mode = "n" },
+  { "<leader>Tf", "<cmd>ToggleTerm direction=float<CR>",        desc = "Floating terminal",          mode = "n" },
+  { "<leader>Th", "<cmd>ToggleTerm direction=horizontal<CR>",   desc = "Horizontal terminal",        mode = "n" },
+  { "<leader>Tv", "<cmd>ToggleTerm direction=vertical<CR>",     desc = "Vertical terminal",          mode = "n" },
+
+  { "<leader>t", group = "tabs" },
+  -- { "<leader>tc", "<cmd>tabnew<CR>", desc = "Create tab", mode = "n" },
+  {
+  "<leader>tc",
+    function()
+      local view = require("nvim-tree.view")
+      local was_open = view.is_visible()
+
+      vim.cmd("tabnew")
+
+      if was_open then
+        require("nvim-tree.api").tree.open()
+      end
+    end,
+    desc = "Create tab (preserve NvimTree)",
+    mode = "n",
+  },
+  { "<leader>tp", "<cmd>tabprevious<CR>", desc = "Previous tab", mode = "n" },
+  { "<leader>tn", "<cmd>tabnext<CR>", desc = "Next tab", mode = "n" },
+  { "<leader>t^", "<cmd>tabfirst<CR>", desc = "First tab", mode = "n" },
+  { "<leader>t$", "<cmd>tablast<CR>", desc = "Last tab", mode = "n" },
+  { "<leader>t<", "<cmd>tabmove -1<CR>", desc = "Move tab left", mode = "n" },
+  { "<leader>t>", "<cmd>tabmove +1<CR>", desc = "Move tab right", mode = "n" },
+  { "<leader>td", "<cmd>tab split<CR>", desc = "Duplicate tab", mode = "n" },
 
   -- LazyGit
   { "<leader>g", function() require('toggleterm.terminal').Terminal:new({ cmd = 'lazygit', hidden = true }):toggle() end, desc = "LazyGit (floating)", mode = "n" },

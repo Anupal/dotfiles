@@ -30,6 +30,30 @@ vim.opt.cmdheight = 1                              -- Command line height
 vim.opt.showmode = false                           -- Don't show mode in command line
 vim.opt.list = true                                -- Display · for whitespace and
 vim.opt.listchars = { tab = '→ ', space = '·' }    -- → for tabs
+vim.o.winbar = "%f %m"
+
+-- Customize winbar
+local devicons = require("nvim-web-devicons")
+function _G.CustomWinbar()
+  local filename = vim.fn.expand("%:t")
+  local relpath = vim.fn.expand("%f")
+
+  if filename == "" then
+    filename = "[No Name]"
+  end
+
+  local icon, icon_hl = devicons.get_icon(filename, nil, { default = true })
+  local modified = vim.bo.modified and " ●" or ""
+
+  if icon then
+    return "%#WinBarCustom#" ..
+           "%#" .. icon_hl .. "#" .. icon .. " " ..
+           "%#WinBarCustom#" .. relpath .. modified
+  else
+    return "%#WinBarCustom#" .. relpath .. modified
+  end
+end
+vim.o.winbar = "%{%v:lua.CustomWinbar()%}"
 
 -- File handling
 vim.opt.backup = false                             -- Don't create backup files
