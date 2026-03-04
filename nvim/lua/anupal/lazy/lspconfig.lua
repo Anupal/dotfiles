@@ -59,6 +59,18 @@ return {
             }
         })
 
+        vim.lsp.config('harper_ls', {
+          filetypes = { "markdown", "typst" },
+          settings = {
+            ["harper-ls"] = {
+              linters = {
+                SentenceCapitalization = true,
+                SpellCheck = true
+              }
+            }
+          }
+        })
+
         -- local pid = vim.fn.getpid()
         -- vim.lsp.config("omnisharp", {
         --     capabilities = capabilities,

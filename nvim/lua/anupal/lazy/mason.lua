@@ -33,7 +33,8 @@ return {
         "emmet_ls",
         "prismals",
         "pyright",
-        "omnisharp"
+        "omnisharp",
+        "harper_ls" -- grammar checker
       },
     })
   end,
