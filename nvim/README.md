@@ -52,6 +52,15 @@ Using this repo to manage my nvim configuration.
 - `grr` show references
 - `grn` rename variable
 
+### tree-sitter setup
+```
+# install clang (run as root)
+bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
+
+# install tree-sitter cli using cargo
+cargo install --locked tree-sitter-cli
+```
+
 ### References
 - https://github.com/radleylewis/nvim-lite/blob/youtube_demo/init.lua
 - https://vineeth.io/posts/neovim-setup
