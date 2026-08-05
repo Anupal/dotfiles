@@ -52,10 +52,23 @@ Using this repo to manage my nvim configuration.
 - `grr` show references
 - `grn` rename variable
 
+### fzf
+```
+apt install fzf -y
+
+# libfzf.so: cannot open shared object file: No such file or directory
+cd ~/.local/share/nvim/lazy/telescope-fzf-native.nvim
+make
+```
+
 ### tree-sitter setup
 ```
 # install clang (run as root)
 bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
+
+# install rust
+apt install rustup build-essential -y
+rustup install stable
 
 # install tree-sitter cli using cargo
 cargo install --locked tree-sitter-cli

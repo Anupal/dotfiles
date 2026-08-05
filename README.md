@@ -9,6 +9,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 - setup `.tmux.conf` symlink
 - start tmux and press `ctrl`+`b` then `shift`+`i`
 
+> Nvim has its own dependencies. Check [nvim/README.md](nvim/README.md)
 
 ### Symlinks
 ```
